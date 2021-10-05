@@ -13,3 +13,4 @@
     jpa:
       hibernate:
         ddl-auto: update
+      show-sql: true
