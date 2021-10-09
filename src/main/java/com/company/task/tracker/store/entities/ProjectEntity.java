@@ -19,7 +19,7 @@ import java.util.List;
 public class ProjectEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    Long Id;
+    Long id;
 
     @Column(unique = true)
     String name;
@@ -32,6 +32,6 @@ public class ProjectEntity {
 
     @Builder.Default
     @OneToMany
-    @JoinColumn(name = "project_id", referencedColumnName = "id")
+    @JoinColumn(name = "project_id")
     List<TaskStateEntity> taskStates = new ArrayList<>();
 }
